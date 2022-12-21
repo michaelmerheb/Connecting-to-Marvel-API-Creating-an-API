@@ -22,9 +22,15 @@ Once we are finished extracting the data above and saving it to a file, we will 
 1. Create an API that allows users to interact with the DataFrame generated in the Part 1 of the assignments.
 2. Create a resource called Characters and route it to the url '/characters' and endpoint 'characters'.
 3. Implement the following methods for this resource:
+ 
  a. Retrieve the whole DataFrame in json format
+ 
  b. Retrieve information for a single entry or for a list of entries identified by either the Character Name or the Character ID
+ 
  c. Add a new character to the existing DataFrame by specifying its characteristics (Character Name, Character ID, Available Events, Available Series, Available Comics, and Price of Comic). The API should restrict addition of characters with pre-existing Character IDs.
+ 
  d. Add a new character to the existing DataFrame by specifying only the Character ID. The API should fill in the remaining information by extracting it from Marvel's API and appending to the DataFrame. The API should return an error if the provided character id is not found.
+ 
  e. Delete a character or a list of characters by providing either the Character ID or the Character Name. The API should return an error if the character you are trying to delete does not exist in the DataFrame.
+
 4. Protect both the addition and the deletion of characters using an OAuth authentication scheme whereby users can sign up and then log in to obtain an access token with limited scope and a duration of 1 hour.
